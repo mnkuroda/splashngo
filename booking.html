@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book Splash &amp; Go for your event — pick dates on the calendar and send a request to our cart team in Raleigh, NC.">
+  <title>Book the Cart — Splash &amp; Go</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230D7377'/%3E%3Cpath d='M18 38c6-14 22-14 28 0' fill='none' stroke='%23E8F6F5' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='40' cy='22' r='5' fill='%23F4C95F'/%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Main">
+      <a class="nav-brand" href="index.html">Splash &amp; Go</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html#menu">Menu</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="booking.html" aria-current="page">Book Us</a></li>
+        <li>
+          <a
+            href="https://www.facebook.com/profile.php?id=61594376743574"
+            target="_blank"
+            rel="noopener noreferrer">
+            Facebook
+          </a>
+        </li>
+      </ul>
+      <a class="btn btn-nav" href="mailto:splashandgobevs@gmail.com">Email Us</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container page-hero-inner reveal">
+        <p class="page-eyebrow">Event booking</p>
+        <h1>Request the cart</h1>
+        <p>
+          Pick your preferred date(s) on the calendar, add a few event details, and we’ll receive
+          your request at <strong>splashandgobevs@gmail.com</strong>.
+        </p>
+      </div>
+    </section>
+
+    <section class="section booking-section" aria-labelledby="booking-heading">
+      <div class="container">
+        <div id="booking-success" class="booking-success" hidden>
+          <h2>Request sent</h2>
+          <p>
+            Thanks! Your booking request is on its way to Splash &amp; Go. We’ll reply by email as soon as we can.
+          </p>
+          <a class="btn btn-primary" href="index.html">Back to home</a>
+        </div>
+
+        <form
+          id="booking-form"
+          class="booking-layout"
+          action="https://formsubmit.co/splashandgobevs@gmail.com"
+          method="POST">
+          <input type="hidden" name="_subject" value="Splash &amp; Go booking request">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" id="booking-next" value="">
+          <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="booking-calendar-panel reveal">
+            <h2 id="booking-heading">Choose date(s)</h2>
+            <p class="booking-hint">Click one or more dates you’d like us there. Past days are unavailable.</p>
+
+            <div class="calendar" data-calendar>
+              <div class="calendar-toolbar">
+                <button type="button" class="calendar-nav" data-cal-prev aria-label="Previous month">‹</button>
+                <h3 class="calendar-month" data-cal-label>Month</h3>
+                <button type="button" class="calendar-nav" data-cal-next aria-label="Next month">›</button>
+              </div>
+              <div class="calendar-weekdays" aria-hidden="true">
+                <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+              </div>
+              <div class="calendar-grid" data-cal-grid role="grid" aria-label="Event date calendar"></div>
+            </div>
+
+            <div class="selected-dates">
+              <h3>Selected dates</h3>
+              <ul class="selected-dates-list" data-selected-list>
+                <li class="selected-dates-empty">No dates selected yet</li>
+              </ul>
+              <input type="hidden" name="Requested Dates" id="requested-dates" value="" required>
+              <p class="field-error" data-dates-error hidden>Please select at least one date.</p>
+            </div>
+          </div>
+
+          <div class="booking-fields reveal">
+            <h2>Event details</h2>
+
+            <div class="field-grid">
+              <label class="field">
+                <span>Your name</span>
+                <input type="text" name="Name" required autocomplete="name">
+              </label>
+
+              <label class="field">
+                <span>Email</span>
+                <input type="email" name="Email" required autocomplete="email">
+              </label>
+
+              <label class="field">
+                <span>Phone</span>
+                <input type="tel" name="Phone" autocomplete="tel">
+              </label>
+
+              <label class="field">
+                <span>Estimated guests</span>
+                <input type="number" name="Guest Count" min="1" step="1" placeholder="e.g. 75">
+              </label>
+
+              <label class="field field-span">
+                <span>Event type</span>
+                <select name="Event Type">
+                  <option value="">Select one</option>
+                  <option>Corporate / office</option>
+                  <option>Wedding / private party</option>
+                  <option>Market / pop-up</option>
+                  <option>School / campus</option>
+                  <option>Community event</option>
+                  <option>Other</option>
+                </select>
+              </label>
+
+              <label class="field field-span">
+                <span>Event location</span>
+                <input type="text" name="Location" placeholder="Venue or city (Raleigh area)" autocomplete="address-level2">
+              </label>
+
+              <label class="field">
+                <span>Start time</span>
+                <input type="time" name="Start Time">
+              </label>
+
+              <label class="field">
+                <span>End time</span>
+                <input type="time" name="End Time">
+              </label>
+
+              <label class="field field-span">
+                <span>Notes</span>
+                <textarea name="Notes" rows="4" placeholder="Anything we should know — menu focus, setup needs, parking, etc."></textarea>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-large booking-submit">
+              Email booking request
+            </button>
+            <p class="booking-fineprint">
+              Submitting opens a request email to splashandgobevs@gmail.com with your selected dates.
+              The first time this form is used, that inbox may need to confirm FormSubmit once.
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand">Splash &amp; Go</p>
+      <p>Mobile coffee &amp; mega tea · Raleigh, NC</p>
+      <p>
+        <a href="mailto:splashandgobevs@gmail.com">splashandgobevs@gmail.com</a>
+        ·
+        <a
+          href="https://www.facebook.com/profile.php?id=61594376743574"
+          target="_blank"
+          rel="noopener noreferrer">
+          Facebook
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>
